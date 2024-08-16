@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --clr-primary: #F4F0E8;
+  --clr-secoundary: #000;
+  --clr-secoundary-2: #252525;
+  --clr-accent-2: #213149;
+  --clr-accent: #2C44DF;
+  --clr-gradient: linear-gradient(90deg, #FF5151 9%, #594EF3 58%, #8C3CEE 87%);
+  --clr-shadow: rgba(0, 0, 0, 0.25);
+  --clr-light-black: #AAAAAA;
+
+  --size-mobile-md: 640px;
+}
+
+#root {
+  background: var(--clr-primary);
+  overflow-x: hidden;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  min-width: 390px;
+  font-style: normal;
+}
+
+#root>* {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+html,
+body {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media screen and (max-width:640px) {
+  .display-desktop-only {
+    position: absolute;
+    top: -99999px;
+    scale: 0;
+  }
+
+  #root {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+}

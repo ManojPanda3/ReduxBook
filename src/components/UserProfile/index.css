@@ -1,0 +1,6 @@
+.user-profile {
+  aspect-ratio: 1/1;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--clr-light-black);
+}

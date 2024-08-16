@@ -1,0 +1,10 @@
+:root {
+  --size-navbar-h: 3rem;
+  --size-navbar-p-y: 0.6rem;
+  --size-navbar-p-x: 2rem;
+}
+
+.book {
+  height: 380px;
+  width: 240px;
+}

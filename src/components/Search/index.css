@@ -1,0 +1,14 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 4px var(--clr-shadow), inset 2px 2px 4px var(--clr-shadow);
+  border-radius: 20% / 80%;
+  width: 8rem;
+  padding: 0px 1rem;
+  justify-content: space-between;
+  height: 2.4rem;
+}
+
+.search-text {
+  color: var(--clr-light-black);
+}
