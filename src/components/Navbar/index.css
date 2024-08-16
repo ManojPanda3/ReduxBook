@@ -7,11 +7,29 @@
   margin: 0px;
 }
 
+.navbar {
+  animation: scrollDown 0.25s ease-in;
+}
+
+@keyframes scrollDown {
+  from {
+    transform: translateY(-3rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 .tabs>li>a {
   text-decoration: none;
   color: var(--clr-secoundary);
   font-weight: 300;
   font-size: 0.9rem;
+}
+
+.tabs>li>a:hover {
+  font-weight: 500;
 }
 
 .logo {

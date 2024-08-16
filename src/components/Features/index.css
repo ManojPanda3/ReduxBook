@@ -18,6 +18,18 @@
   color: transparent;
 }
 
+.line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f00;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
 .features {
   width: 100vw;
   display: grid;
@@ -26,6 +38,22 @@
   grid-column-gap: 7rem;
   grid-row-gap: 3rem;
   text-align: center;
+  transform: translateY(25%);
+}
+
+.features>*:hover>p {
+  font-weight: bold;
+}
+
+.features>*:has(svg):hover {
+  translate: transform 0.3s ease-in-out;
+  transform: scale(1);
+
+}
+
+.features>*:has(svg):hover {
+  transform: scale(1.1);
+
 }
 
 @media screen and (max-width:640px) {

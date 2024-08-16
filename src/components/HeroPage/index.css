@@ -14,6 +14,7 @@
   padding: 0px;
   margin: 0px;
   gap: max(2rem, 20vw);
+  animation: appear 0.75s ease-in;
 }
 
 .hero-img {
@@ -71,14 +72,6 @@
   }
 }
 
-.btn {
-  padding: 0.8rem 1.4rem;
-  background-color: var(--clr-secoundary-2);
-  color: var(--clr-primary);
-  border: none;
-  font-weight: 500;
-  border-radius: 45% /100%;
-}
 
 .hero-section-cta {
   display: flex;
@@ -90,4 +83,9 @@
 .hero-section-cta>a {
   font-size: 0.9rem;
   text-decoration: none;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.hero-section-cta>a:hover {
+  text-shadow: 0px 0px 9px var(--clr-accent);
 }

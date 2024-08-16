@@ -7,7 +7,7 @@ const Search = () => {
     <SearchNormal1
       size="24"
       color="#000"
-      className="search-icon"
+      style={{ cursor: "pointer" }}
     />
   </div>);
 }

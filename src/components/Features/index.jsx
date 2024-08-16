@@ -1,11 +1,34 @@
 import { } from 'react'
 import './index.css'
 import { Bag2, Bill, SearchNormal1, Star1 } from 'iconsax-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 const Features = () => {
+  useGSAP(() => {
+    gsap.fromTo(".feature-section", {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      ease: "power1.inOut",
+      delay: 0.2,
+      scrollTrigger: {
+        trigger: '.feature-section',
+        start: 'top 80%', // Adjust this value as needed
+        end: 'bottom 20%',
+        toggleActions: 'play none none none' // Play animation when entering the viewport
+      }
+    });
+  });
+
   return <section className="feature-section">
     <div className="feature-texts">
       <p>The</p>
-      <p>Features</p>
+      <p className="line">Features</p>
       <p>We Provide</p>
     </div>
     <div className="features">

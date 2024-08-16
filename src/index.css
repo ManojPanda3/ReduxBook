@@ -56,3 +56,18 @@ body {
   }
 
 }
+
+.btn {
+  padding: 0.8rem 1.4rem;
+  background-color: var(--clr-secoundary-2);
+  color: var(--clr-primary);
+  border: none;
+  font-weight: 500;
+  border-radius: 45% /100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #000;
+}
