@@ -11,4 +11,9 @@ export default defineConfig({
       threshold: 1024,
     }),
   ],
+  server: {
+    proxy: {
+      '/api': 'http://127.0.0.1:6000/',
+    }
+  }
 });

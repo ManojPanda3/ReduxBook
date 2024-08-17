@@ -8,7 +8,19 @@
 }
 
 .navbar {
+  display: flex;
+  padding: var(--size-navbar-p-y) var(--size-navbar-p-x);
+  max-width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 4px var(--clr-shadow);
+  height: var(--size-navbar-h);
   animation: scrollDown 0.25s ease-in;
+}
+
+.login-btn {
+  border: none;
+  cursor: pointer;
 }
 
 @keyframes scrollDown {
@@ -25,7 +37,7 @@
   text-decoration: none;
   color: var(--clr-secoundary);
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 1.0rem;
 }
 
 .tabs>li>a:hover {
@@ -37,16 +49,6 @@
   font-size: 1.4rem;
 }
 
-.navbar {
-  display: flex;
-  padding: var(--size-navbar-p-y) var(--size-navbar-p-x);
-  max-width: 100vw;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 2px 2px 4px var(--clr-shadow);
-  height: var(--size-navbar-h);
-}
-
 .nav-right {
   display: flex;
   align-items: center;
@@ -56,6 +58,6 @@
 
 @media screen and (max-width:640px) {
   .nav-right {
-    width: max(40%, 210px);
+    width: max(20%, 160px);
   }
 }

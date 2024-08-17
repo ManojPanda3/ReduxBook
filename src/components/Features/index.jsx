@@ -1,10 +1,8 @@
-import { } from 'react'
 import './index.css'
 import { Bag2, Bill, SearchNormal1, Star1 } from 'iconsax-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
-
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -27,8 +25,9 @@ const Features = () => {
 
   return <section className="feature-section">
     <div className="feature-texts">
+      <i className="line"></i>
       <p>The</p>
-      <p className="line">Features</p>
+      <p>Features</p>
       <p>We Provide</p>
     </div>
     <div className="features">

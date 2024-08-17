@@ -5,6 +5,7 @@
 }
 
 .feature-texts {
+  min-width: 365px;
   padding: 2.4rem;
   font-weight: 700;
   font-size: 1.8rem;
@@ -12,25 +13,19 @@
   gap: 0.3rem;
 }
 
-.feature-texts>p:nth-child(2) {
+.feature-texts>p:nth-child(3) {
   background: var(--clr-gradient);
   background-clip: text;
   color: transparent;
 }
 
-.line::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f00;
-  transform: scaleX(0);
-  transform-origin: left;
+.line {
+  display: inline-block;
+  background-color: #000;
 }
 
 .features {
+  min-width: 365px;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -38,7 +33,6 @@
   grid-column-gap: 7rem;
   grid-row-gap: 3rem;
   text-align: center;
-  transform: translateY(25%);
 }
 
 .features>*:hover>p {
