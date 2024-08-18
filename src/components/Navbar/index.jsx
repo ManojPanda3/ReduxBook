@@ -3,6 +3,7 @@ import './index.css'
 import Search from '../Search';
 import UserProfile from '../UserProfile';
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 const NavBar = () => {
   const [isUserLogin, setUserLogin] = useState(false);
   useEffect(() => {
@@ -31,11 +32,21 @@ const NavBar = () => {
     }}>
       <Search />
       <ul className="tabs display-desktop-only">
-        <li><a href="/">Home</a></li>
-        <li><a href="/shop">Shop</a></li>
-        <li><a href="#Footer">Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/shop">Shop</Link></li>
+        <li><a
+          style={{ cursor: "pointer" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({
+              top: document.querySelector("#footer").offsetTop,
+              behavior: "smooth",
+            });
+          }}
+
+        >Contact</a></li>
       </ul>
-      {isUserLogin ? <UserProfile /> : <a className="display-desktop-only login-btn ">Login</a>}
+      {isUserLogin ? <UserProfile /> : <Link className="display-desktop-only login-btn " to="/login">Login</Link>}
     </div>
   </nav>
 }

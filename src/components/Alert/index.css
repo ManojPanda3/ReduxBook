@@ -1,0 +1,25 @@
+.alert {
+  background: tomato;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  animation: scrollDown 0.25s ease-in;
+}
+
+.alert>p {
+  color: #F7F7F7;
+  padding: 1rem;
+}
+
+.alert>svg {
+  position: absolute;
+  right: 0.6rem;
+  top: 0.6rem;
+}
+
+#alert {
+  position: fixed;
+  top: 4.5rem;
+  left: 50vw;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,22 @@
+.password {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+input {
+  background: #ede9e8;
+  border: none;
+}
+
+.show-password {
+  position: absolute;
+  right: 0.4rem;
+}
+
+.hide-password {
+  position: absolute;
+  scale: 0;
+  right: 0.4rem;
+}

@@ -20,18 +20,11 @@
 
 .login-btn {
   border: none;
+  text-decoration: none;
+  color: black;
   cursor: pointer;
 }
 
-@keyframes scrollDown {
-  from {
-    transform: translateY(-3rem);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
 
 .tabs>li>a {
   text-decoration: none;
@@ -53,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: max(33%, 400px);
+  width: max(33%, 430px);
 }
 
 @media screen and (max-width:640px) {

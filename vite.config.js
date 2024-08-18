@@ -13,7 +13,10 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/api': 'http://127.0.0.1:6000/',
+      '/api': {
+        target: 'http://127.0.0.1:6000/',
+        changeOrigin: true,
+      },
     }
   }
 });

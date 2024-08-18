@@ -19,3 +19,13 @@
     opacity: 1;
   }
 }
+
+@keyframes scrollDown {
+  from {
+    transform: translateY(-5rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

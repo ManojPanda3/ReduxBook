@@ -1,0 +1,3 @@
+[submodule "ReduxBook-Backend"]
+	path = ReduxBook-Backend
+	url = git@github.com:ManojPanda3/ReduxBook-Backend.git

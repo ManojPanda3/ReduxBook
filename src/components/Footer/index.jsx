@@ -3,7 +3,7 @@ import './index.css'
 import Search from '../Search';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-const Footer = () => {
+const Footer = ({ style }) => {
   useGSAP(() => {
     gsap.fromTo("footer", {
       opacity: 0,
@@ -19,7 +19,7 @@ const Footer = () => {
       }
     });
   });
-  return <footer>
+  return <footer style={style} id="footer">
     <p className="logo">ReduxBook</p>
     <div className="footer-details">
       <div className="search-book">

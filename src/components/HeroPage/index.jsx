@@ -1,6 +1,7 @@
 import { } from 'react'
 import './index.css'
 import { ArrowDown } from 'iconsax-react';
+import { Link } from 'react-router-dom';
 
 
 const HeroSectionBookImageSize = { height: 1300, width: 1300 };
@@ -18,8 +19,8 @@ const HeroSection = () => {
       <div>
         <p className="hero-section-para">A book a day keeps boredom at bay</p>
         <div className="hero-section-cta">
-          <button className="btn">GetStarted</button>
-          <a href="/learnmore">Learn More</a>
+          <Link className="btn" to="/login">GetStarted</Link>
+          <Link to="/learnmore">Learn More</Link>
         </div>
       </div>
     </div>
