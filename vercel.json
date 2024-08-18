@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.jsx",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "ReduxBook-Backend/src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/main.jsx"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "ReduxBook-Backend/src/index.js"
+    }
+  ],
+  "env":{
+    "PORT":'3000'
+  }
+}
