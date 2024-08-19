@@ -1,26 +1,10 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "src/main.jsx",
-      "use": "@vercel/static-build"
-    },
-    {
-      "src": "ReduxBook-Backend/src/index.js",
-      "use": "@vercel/node"
+      "source": "/api/:path*",
+      "destination": "https://redux-book-backend.vercel.app/api/:path*"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/main.jsx"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "ReduxBook-Backend/src/index.js"
-    }
-  ],
-  "env":{
-    "PORT":'3000'
-  }
+  ]
 }
+

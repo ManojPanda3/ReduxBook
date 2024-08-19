@@ -30,14 +30,20 @@ const loginUser = async (userDetails, loginMethod) => {
   }
 
   console.log(sendingBody)
-  const user = await fetch("/api/v1/user/isuserexist", {
+  const user = await fetch("/api/v1/user/userLogin", {
     method: 'POST',
     body: JSON.stringify(sendingBody),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-  console.log(user);
+  const jsonRes = await user.json();
+  console.log(jsonRes);
+  if (!jsonRes.success) {
+    Alert(jsonRes.message);
+    return;
+  }
+  console.info("user succesfully logined")
   return;
 }
 const Login = () => {

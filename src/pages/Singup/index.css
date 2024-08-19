@@ -1,0 +1,18 @@
+.singup-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.singup-section>h1 {
+  font-size: 1.5rem;
+}
+
+.singup-section>div:nth-child(2) {
+  background: var(--clr-light-black);
+  height: 12rem;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}

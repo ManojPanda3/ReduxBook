@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:6000/',
+        target: 'https://redux-book-backend.vercel.app/',
         changeOrigin: true,
       },
     }
