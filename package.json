@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "vercel-build": "vite build",
+    "vercel-build": "vite build && cp -r asset dist/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -17,6 +17,7 @@
     "js-cookie": "^3.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-lazy-load": "^4.0.1",
     "react-router-dom": "^6.26.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-pwa": "^0.20.1"

@@ -13,6 +13,7 @@
   --size-mobile-md: 640px;
 }
 
+
 #root {
   background: var(--clr-primary);
   overflow-x: hidden;

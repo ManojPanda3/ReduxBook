@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Jacques+Francois&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Itim&family=Jacques+Francois&display=swap'); */
+
+@font-face {
+  font-family: "Itim";
+  src: url("../asset/fonts/ItimRegular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jacques Francois";
+  src: url("../asset/fonts/JacquesFrancois.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --size-herosection-image-size: 300px;
