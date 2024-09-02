@@ -13,3 +13,62 @@
 .search-text {
   color: var(--clr-light-black);
 }
+
+.search-expand {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  animation: appear 1s ease;
+}
+
+.search-expand {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.search-expand>div {
+  background: white;
+  height: fit-content;
+  align-items: center;
+  display: flex;
+  margin-top: 9rem;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 1s;
+}
+
+.search-expand>div>input {
+  padding: 0.8rem 1rem;
+  background: white;
+  border-right: 1px solid #ADAAAB;
+}
+
+.search-expand>div>svg {
+  padding: 0.33rem;
+}
+
+.seach-bar-close {
+  position: absolute;
+  right: 10%;
+}
+
+.search-suggetions {
+  padding: 0rem;
+  width: 10rem;
+  background: white;
+}
+
+.search-suggetions>li {
+  list-style: none;
+  padding: 0.8rem 0.9rem;
+}
+
+.search-suggetions>li:hover {
+  background: rgba(230, 230, 230, 1)
+}

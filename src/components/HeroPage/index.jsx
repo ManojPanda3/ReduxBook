@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div>
         <p className="hero-section-para">A book a day keeps boredom at bay</p>
         <div className="hero-section-cta">
-          <Link className="btn" to="/login">GetStarted</Link>
+          <Link className="btn" to="/singup">GetStarted</Link>
           <Link to="/learnmore">Learn More</Link>
         </div>
       </div>

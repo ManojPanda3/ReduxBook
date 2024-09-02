@@ -4,23 +4,8 @@ import { Link } from 'react-router-dom';
 import NavBar from '../../components/Navbar';
 import Password from '../../components/Password';
 import Alert from '../../components/Alert';
+import { verifyEmail, verifyPassword } from "../../utils/email.utils.js"
 
-
-// a function to verify a email address
-const verifyEmail = (email) => {
-  const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-  if (email.match(emailRegex)) return true;
-  Alert("enter a valid email");
-  return false;
-}
-
-// a function to verify the password
-const verifyPassword = (password) => {
-  const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+=-{};:"<>,./?]).{6,}$/;
-  if (password.match(passwordRegex)) return true;
-  Alert("Enter a valid Password , \nThe password Must be 6 character long with 1UpperCaselatter")
-  return false;
-}
 
 const loginUser = async (userDetails, loginMethod) => {
   const sendingBody = {
