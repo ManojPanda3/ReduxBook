@@ -1,1 +1,65 @@
-.book-profile-container {}
+.book-profile-container {
+  font-size: 12px;
+  height: 90vh;
+  color: black;
+  display: grid;
+  padding: 0rem 6rem;
+  align-content: center;
+  grid-template-columns: repeat(2, auto);
+  min-width: 664px;
+  max-width: 700px;
+}
+
+.book-cover {
+  aspect-ratio: 32/51;
+  width: 14rem;
+  background: var(--clr-light-black);
+  padding: 0px;
+  margin: 0px;
+}
+
+.author-details>div>img {
+  aspect-ratio: 1/1;
+  width: 2.4rem;
+  border-radius: 50%;
+}
+
+.author-details {
+  display: flex;
+  gap: 0.6rem;
+  font-weight: bold;
+  padding: 1rem 0rem;
+}
+
+.book-title-profile {
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.book-rating-profile {
+  padding: 0px;
+  margin: 0px;
+  font-weight: 500;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.book-description-profile {
+  padding: 0px;
+  margin: 0px;
+  font-weight: 400;
+  width: 100px;
+}
+
+.book-price-profile {
+  margin: 6rem 0rem 2rem 0rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.buy-now-btn {
+  text-decoration: none;
+  margin-top: 1rem;
+}

@@ -1,7 +1,6 @@
 import { } from 'react'
 import './index.css'
 import LazyLoad from 'react-lazy-load';
-import { DollarCircle } from 'iconsax-react';
 const Books = ({ Image, Price, Title, Rating }) => {
   return <div className="Book">
     <LazyLoad>
@@ -18,7 +17,6 @@ const Books = ({ Image, Price, Title, Rating }) => {
     </p>
     <p className="book-price">
       ${Price}
-
     </p>
   </div>
 }
