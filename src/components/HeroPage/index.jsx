@@ -1,6 +1,5 @@
 import { } from 'react'
 import './index.css'
-import { ArrowDown } from 'iconsax-react';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
 
@@ -26,11 +25,12 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-    <ArrowDown
-      size="24"
-      style={{ position: "absolute", bottom: "5rem", left: "50%" }}
-      color="#000"
-    />
+    <svg
+      style={{ position: "absolute", bottom: "5rem", left: "50%" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+      viewBox="0 0 24 24" fill="none">
+      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.5"
+        d="M18.07 14.43L12 20.5l-6.07-6.07M12 3.5v16.83"></path>
+    </svg>
   </section>
 }
 export default HeroSection;
