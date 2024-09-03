@@ -45,7 +45,7 @@ const Search = () => {
   const [isSearchExtend, setSearchExtend] = useState(false);
   return (<>
     <div className="search-bar"
-      onClick={() => setSearchExtend(n => !n)}
+      onClick={() => setSearchExtend(true)}
     >
       <p className="search-text">Search</p>
       <SearchNormal1

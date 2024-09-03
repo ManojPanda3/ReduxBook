@@ -35,11 +35,3 @@
 .active-tab {
   background: var(--clr-accent) !important;
 }
-
-.books {
-  width: 100vw;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-}

@@ -1,0 +1,51 @@
+.Book {
+  cursor: pointer;
+}
+
+.Book>* {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+.book-title {
+  font-weight: bold;
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+
+.book-price {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.book-img {
+  aspect-ratio: 32/51;
+  width: 11rem;
+  background: var(--clr-light-black);
+  padding: 0px;
+  margin: 0px;
+}
+
+.Book:hover {
+  scale: 1.1;
+  transition: all 250ms ease-in;
+}
+
+.Book:not(:hover) {
+  scale: 1;
+  transition: all 250ms ease-out;
+}
+
+.LazyLoad {
+  width: fit-content;
+  height: fit-content;
+}
+
+@media screen and (max-width: 640px) {
+  .Book {
+    gap: 1rem;
+    transform: scale(0.7);
+  }
+}

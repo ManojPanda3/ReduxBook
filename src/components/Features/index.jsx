@@ -16,8 +16,8 @@ const Features = () => {
       delay: 0.2,
       scrollTrigger: {
         trigger: '.feature-section',
-        start: 'top 80%', // Adjust this value as needed
-        end: 'bottom 20%',
+        start: '-30% center', // Adjust this value as needed
+        end: '-25% center',
         toggleActions: 'play none none none' // Play animation when entering the viewport
       }
     });

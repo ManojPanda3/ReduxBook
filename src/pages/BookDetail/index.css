@@ -1,0 +1,65 @@
+.profile-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 8rem);
+}
+
+.user-details-profile {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.95rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.user-details-profile>p {
+  border: none;
+  /* margin-bottom: 1rem; */
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.user-details-profile>div:nth-child(1) {
+  background: var(--clr-light-black);
+  aspect-ratio: 1 / 1;
+  width: 10rem;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.3rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.user-details-profile>div:nth-child(1)>img {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-details-profile>p[name="fullname"] {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 0.6rem;
+}
+
+.user-details-profile>p[name="username"] {
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
+.user-details-profile>p[name="description"] {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: 14rem;
+  text-align: center;
+}

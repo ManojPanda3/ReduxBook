@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Singup from './pages/Singup'
+import Profile from './pages/Profile'
+import BookDetail from './pages/BookDetail'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/singup" element={<Singup />}></Route>
+          <Route path="/profile" element={<Profile />}></Route >
+          <Route path="/book-detail" element={<BookDetail />}></Route >
         </Routes>
       </Suspense>
     </BrowserRouter>

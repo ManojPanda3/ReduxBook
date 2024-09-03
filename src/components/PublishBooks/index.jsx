@@ -2,7 +2,6 @@ import { } from 'react'
 import './index.css'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import Books from '../Books';
 const RecommendedBooks = () => {
   useGSAP(() => {
     // gsap.fromTo(".recommended-book-section", {
@@ -22,11 +21,7 @@ const RecommendedBooks = () => {
   });
   return (<section className="recommended-book-section">
     <p>Recommended Books</p>
-    <div className="books">
-      <Books Image={"https://m.media-amazon.com/images/I/81GifSHYiGL._SY425_.jpg"} Price={"100"} Rating={4.5} Title={"How to publish a book"} />
-      <Books Image={"https://m.media-amazon.com/images/I/81GifSHYiGL._SY425_.jpg"} Price={"100"} Rating={4.5} Title={"How to publish a book"} />
-      <Books Image={"https://m.media-amazon.com/images/I/81GifSHYiGL._SY425_.jpg"} Price={"100"} Rating={4.5} Title={"How to publish a book"} />
-    </div>
+    <div className="books"></div>
     <div className="books-tab">
       <i className="active-tab"></i>
       <i></i>
