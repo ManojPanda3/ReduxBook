@@ -33,7 +33,7 @@ const Singup = () => {
           setLoadingState("success")
           setTimeout(n => navigate('/'), 1000);
         }
-      })
+      }
       .catch(err => {
         console.error("Error while creating user account ,\n Error :", err);
       })
@@ -92,7 +92,9 @@ const Singup = () => {
       })
       const otpRes = await otp.json();
       if (!otpRes?.success) {
+        setV
         Alert(otpRes?.message);
+        setLoadingState("");
         return;
       }
       userData.current.delete("AuthToken");
