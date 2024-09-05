@@ -7,7 +7,8 @@ const Alert = (alert) => {
   // removing alertElement 
   const alertRemove = () => {
     const alertElem = document.getElementById("alert");
-    if (alertElem) alertElem.parentNode.removeChild(alertElem);
+    if (!alertElem) return;
+    alertElem.parentElement.removeChild(alertElem);
   }
   // the error element 
   const alertElement = (<div className="alert">
@@ -28,5 +29,6 @@ const Alert = (alert) => {
   alertNode.id = "alert";
   document.getElementById("root").appendChild(alertNode);
   ReactDOM.createRoot(alertNode).render(alertElement);
+  setTimeout(() => alertRemove(), 5 * 1000);
 }
 export default Alert;

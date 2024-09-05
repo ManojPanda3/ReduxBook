@@ -14,7 +14,6 @@ const loginUser = async (userDetails, loginMethod) => {
     password: userDetails[1],
   }
 
-  console.log(sendingBody)
   const user = await fetch("/api/v1/user/userLogin", {
     method: 'POST',
     body: JSON.stringify(sendingBody),
@@ -23,7 +22,6 @@ const loginUser = async (userDetails, loginMethod) => {
     },
   })
   const jsonRes = await user.json();
-  console.log(jsonRes);
   if (!jsonRes.success) {
     Alert(jsonRes.message);
     return;

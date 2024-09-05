@@ -22,4 +22,5 @@
   top: 4.5rem;
   left: 50vw;
   transform: translateX(-50%);
+  z-index: 10;
 }

@@ -52,7 +52,7 @@ input:focus-within {
 
 .singup-submit {
   padding: 0.7rem 1.1rem;
-  margin-top: 2rem;
+  margin: 2rem 0rem;
   background-color: var(--clr-secoundary-2);
   color: var(--clr-primary);
   border: none;
@@ -105,10 +105,6 @@ label[for=description] {
   padding-top: 1rem;
 }
 
-.singup-section {
-  margin-bottom: 8rem;
-
-}
 
 .avatar-close {
   position: absolute;
