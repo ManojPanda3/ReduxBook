@@ -32,12 +32,13 @@
 .hero-img {
   margin-left: 3rem;
   aspect-ratio: 1/1;
-  width: max(300px, 440px);
+  width: 100%;
   padding: 1rem;
 }
 
-.hero-section-right {}
-
+.hero-section-img {
+  width: clamp(240px, 75%, 500px)
+}
 
 .hero-section-right>*>* {
   padding: 0px;

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 input:focus-within {
@@ -70,48 +70,10 @@ input:focus-within {
   position: absolute;
 }
 
-.user-details>div:nth-child(1) {
-  background: var(--clr-light-black);
-  aspect-ratio: 1 / 1;
-  width: 7.4rem;
-  border-radius: 50%;
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3.3rem;
-  position: relative;
-  margin: 0 auto;
-}
-
-.user-details>div:nth-child(1)>svg {
-  cursor: pointer;
-}
-
-.user-details>div:nth-child(1)>img {
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-}
-
-.file-add>path {
-  stroke: #181818;
-}
-
 .user-details>label[for="user"] {
   padding-top: 1rem;
 }
 
 label[for=description] {
   padding-top: 1rem;
-}
-
-
-.avatar-close {
-  position: absolute;
-  top: -0.25rem;
-  right: -0.25rem;
-}
-
-.avatar-close:hover>path {
-  fill: red;
 }

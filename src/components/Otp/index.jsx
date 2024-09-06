@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './index.css'
 import Alert from '../Alert';
 import { Link } from 'react-router-dom';
+import Loading from '../Loading';
 
 // a otpTimer template which set a timer for 9min 59 sec
 const OtpTimer = ({ setAuthToken }) => {
@@ -46,6 +47,7 @@ const OtpTimer = ({ setAuthToken }) => {
 const Otp = ({ AuthToken, setAuthToken, setOtpVerify }) => {
   // a state func stores the input of 6 input tags (otp)
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [LoadingState, setLoadingState] = useState("");
 
   // on user Input/otp input
   const handleInput = (e) => {
@@ -70,10 +72,12 @@ const Otp = ({ AuthToken, setAuthToken, setOtpVerify }) => {
 
   const verifyOtp = (e) => {
     e.preventDefault();
+    setLoadingState("loading");
     let Otp = "";
     for (let i of otp) {
       if (!i) {
         Alert("Invelid Otp")
+        setLoadingState("");
         return;
       }
       Otp += i;
@@ -93,12 +97,29 @@ const Otp = ({ AuthToken, setAuthToken, setOtpVerify }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.status == 401) {
+          setLoadingState("");
           Alert("Undefine behaviour")
         } else if (data.status == 404) {
           Alert("otp was expired");
+          setLoadingState("fail");
+          setTimeout(n => {
+            setLoadingState("")
+            setAuthToken(null);
+          },
+            1500
+          )
         }
         else if (data.status == 200) {
-          setOtpVerify(true);
+          if (data.data.isOtpMatch) setOtpVerify(true);
+          else {
+            Alert("Wrong Otp");
+            setLoadingState("fail");
+            setTimeout(n => {
+              setLoadingState("")
+            },
+              1500
+            )
+          }
         }
       })
       .catch((err) => {
@@ -106,6 +127,7 @@ const Otp = ({ AuthToken, setAuthToken, setOtpVerify }) => {
       });
   }
   return <div className="otp-container" >
+    <Loading state={LoadingState} childrenVisible={false} />
     <form className="otp-box" onSubmit={verifyOtp} >
       <h1>Verify Email</h1>
       <div className="otps">
