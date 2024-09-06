@@ -1,46 +1,60 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './index.css'
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/Navbar';
 import Password from '../../components/Password';
 import Alert from '../../components/Alert';
 import { verifyEmail, verifyPassword } from "../../utils/email.utils.js"
+import { UserContext } from '../../utils/GlobalVar.utils.js';
+import Loading from '../../components/Loading/index.jsx';
 
 
-const loginUser = async (userDetails, loginMethod) => {
-  const sendingBody = {
-    email: loginMethod ? userDetails[0] : "",
-    username: loginMethod ? "" : userDetails[0],
-    password: userDetails[1],
-  }
-
-  const user = await fetch("/api/v1/user/userLogin", {
-    method: 'POST',
-    body: JSON.stringify(sendingBody),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-  const jsonRes = await user.json();
-  if (!jsonRes.success) {
-    Alert(jsonRes.message);
-    return;
-  }
-  console.info("user succesfully logined")
-  return;
-}
 const Login = () => {
   const [usingEmail, setLoginMode] = useState(false);
+  const [loadingState, setLoadingState] = useState("");
+  const { setUserDetails } = useContext(UserContext);
+
+  const loginUser = async (userDetails, loginMethod) => {
+    const sendingBody = {
+      email: loginMethod ? userDetails[0] : "",
+      username: loginMethod ? "" : userDetails[0],
+      password: userDetails[1],
+    }
+
+    const user = await fetch("/api/v1/user/userLogin", {
+      method: 'POST',
+      body: JSON.stringify(sendingBody),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    })
+    const jsonRes = await user.json();
+    if (!jsonRes.success) {
+      Alert(jsonRes.message);
+      setLoadingState("fail")
+      setTimeout(n => setLoadingState(""), 1000)
+      return;
+    }
+    console.info(jsonRes);
+    setUserDetails(jsonRes.data.userdata);
+    console.info("user succesfully logined");
+    setLoadingState("success");
+    setTimeout(n => setLoadingState(""), 1000);
+    return;
+  }
+
   const handleEmailSubmit = (e) => {
     e.preventDefault();
     if (usingEmail && !verifyEmail(e.target[0].value)) return;
     const password = e.target[1].value;
     if (!verifyPassword(password)) return;
+    setLoadingState("loading")
     loginUser([e.target[0].value, password], usingEmail);
     return;
   }
   return <section >
     <NavBar />
+    <Loading state={loadingState} />
     <div className="login-section">
       <span className="login-head">
         <h1>Login</h1>

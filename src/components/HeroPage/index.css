@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "Itim";
-  src: url("../asset/fonts/ItimRegular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Jacques Francois";
   src: url("../asset/fonts/JacquesFrancois.woff2") format("woff2");
   font-weight: normal;
@@ -52,6 +45,8 @@
 
 .hero-section-right>div:first-child>h1 {
   font-weight: 600;
+  font-family: cursive, serif;
+  text-wrap: balance;
   font-size: 2.4rem;
 }
 

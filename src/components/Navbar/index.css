@@ -51,6 +51,6 @@
 
 @media screen and (max-width:640px) {
   .nav-right {
-    width: max(20%, 160px);
+    width: clamp(16px, 64%, 225px);
   }
 }

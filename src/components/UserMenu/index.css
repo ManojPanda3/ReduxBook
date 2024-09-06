@@ -1,0 +1,40 @@
+.user-menu {
+  position: absolute;
+  padding: 0px;
+  margin: 0.5rem 0px 0px 0px;
+  background: white;
+  z-index: 1;
+  left: -100%;
+  overflow: hidden;
+
+  &.menu-opened {
+    transform: translateY(0%) scaleY(1);
+    transition: all 250ms ease-in;
+  }
+
+  &.menu-closed {
+    transform: translateY(-50%) scaleY(0);
+    transition: all 250ms ease-out;
+  }
+
+  & li {
+    list-style: none;
+    padding: 0.66em 1.3em;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background: rgb(233, 233, 233);
+      font-weight: bold;
+    }
+
+    &:nth-last-child(1):hover {
+      color: red;
+      background: color-mix(in srgb-linear, rgb(233, 233, 233), red 10%);
+    }
+  }
+}
+
+.close {
+  animation: MenuLoad 250ms ease-out reverse;
+}
