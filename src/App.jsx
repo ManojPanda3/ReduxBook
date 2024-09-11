@@ -1,12 +1,13 @@
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense, useEffect, useState, lazy } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Login from './pages/Login'
-import Singup from './pages/Singup'
-import Profile from './pages/Profile'
-import BookDetail from './pages/BookDetail'
+const Home = lazy(async () => await import('./pages/Home'));
+const Login = lazy(async () => await import('./pages/Login'));
+const Singup = lazy(async () => await import('./pages/Singup'));
+const Profile = lazy(async () => await import('./pages/Profile'));
+const BookDetail = lazy(async () => await import('./pages/BookDetail'));
 import { UserContext } from './utils/GlobalVar.utils'
+import Loading from './components/Loading';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   return (
     <UserContext.Provider value={{ userDetails: currentUserDetails, setUserDetails: setCurrentUserDetails }}>
       <BrowserRouter>
-        <Suspense fallback={<>Loading... </>}>
+        <Suspense fallback={<Loading childrenVisible={false} state="loading" />}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/login" element={<Login />}></Route>
