@@ -1,26 +1,6 @@
 import './index.css'
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
 
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
 const Features = () => {
-  useGSAP(() => {
-    gsap.fromTo(".feature-section", {
-      opacity: 0,
-    }, {
-      opacity: 1,
-      ease: "power1.inOut",
-      delay: 0.2,
-      scrollTrigger: {
-        trigger: '.feature-section',
-        start: '-30% center',
-        end: '-25% center',
-        toggleActions: 'play none none none'
-      }
-    });
-  });
 
   return <section className="feature-section">
     <div className="feature-texts">

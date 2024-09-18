@@ -42,10 +42,3 @@
   width: fit-content;
   height: fit-content;
 }
-
-@media screen and (max-width: 640px) {
-  .Book {
-    gap: 1rem;
-    transform: scale(0.7);
-  }
-}

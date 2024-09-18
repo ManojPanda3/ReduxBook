@@ -40,6 +40,17 @@
   width: 100vw;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   margin-top: 2rem;
   margin-bottom: 5rem;
+}
+
+.books>svg {
+  transition: scale 250ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.2;
+  }
+
 }

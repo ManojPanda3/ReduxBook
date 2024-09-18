@@ -4,6 +4,7 @@ import RecommendedBooks from '../../components/RecommendedBooks';
 import { useParams } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
 import { useEffect, useState } from 'react';
+import PublishBooks from '../../components/PublishBooks';
 
 const Profile = () => {
   const { UserName } = useParams();
@@ -33,6 +34,7 @@ const Profile = () => {
       </div>
     </section>
     <RecommendedBooks />
+    <PublishBooks />
   </section>
 }
 export default Profile;

@@ -1,32 +1,17 @@
 import { } from 'react'
 import './index.css'
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-const RecommendedBooks = () => {
-  useGSAP(() => {
-    // gsap.fromTo(".recommended-book-section", {
-    //   opacity: 0,
-    // }, {
-    //   opacity: 1,
-    //   ease: "power1.inOut",
-    //   delay: 0.2,
-    //   scrollTrigger: {
-    //     trigger: '.recommended-book-section',
-    //     start: 'top center',
-    //     // Adjust this value as needed
-    //     end: 'top center',
-    //     toggleActions: 'play none none none'
-    //   }
-    // });
-  });
-  return (<section className="recommended-book-section">
-    <p>Recommended Books</p>
-    <div className="books"></div>
-    <div className="books-tab">
-      <i className="active-tab"></i>
-      <i></i>
-      <i></i>
+import { AddCircle } from 'iconsax-react';
+const PublishBooks = () => {
+  // TODO: 
+  // make a title bar with a  btn to publish the book (if they looking at there own profile)
+  // add 10 top published book and see if there more then 10 book if yes then give a see more option to see more similar type of books 
+  // if user click the publish btn redirect them to another route :) named as /buyBook
+
+  return (<section className="publish-book-section">
+    <div>
+      <p>Published Books</p>
+      <AddCircle size="32" color="#37d67a" variant="Bold" />
     </div>
   </section >);
 }
-export default RecommendedBooks;
+export default PublishBooks;

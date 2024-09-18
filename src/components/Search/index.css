@@ -1,4 +1,5 @@
 .search-bar {
+  cursor: text;
   display: flex;
   align-items: center;
   box-shadow: 2px 2px 4px var(--clr-shadow), inset 2px 2px 4px var(--clr-shadow);
@@ -44,8 +45,10 @@
 }
 
 .search-expand>div>input {
+  cursor: text;
   padding: 0.8rem 1rem;
   background: white;
+  border: 0px;
   border-right: 1px solid #ADAAAB;
 }
 
@@ -54,6 +57,7 @@
 }
 
 .seach-bar-close {
+  cursor: pointer;
   position: absolute;
   right: 10%;
 }

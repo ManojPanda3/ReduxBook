@@ -1,37 +1,3 @@
-.books-tab {
-  display: flex;
-  justify-content: center;
+.publish-book-section {
   width: 100vw;
-  gap: 3px;
-  padding-bottom: 1rem;
-  min-width: 365px;
-}
-
-.books-tab>i {
-  display: inline-block;
-  height: 0.6rem;
-  background: var(--clr-light-black);
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-}
-
-.recommended-book-section {
-  background: var(--clr-accent-2);
-  min-width: 365px;
-}
-
-.recommended-book-section>p:first-child {
-  font-weight: 700;
-  font-size: 1.8rem;
-  padding: 2.4rem;
-  margin: 0px;
-  background: white;
-  color: transparent;
-  background-clip: text;
-  text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.5), -5px -5px 35px rgba(255, 255, 255, 0.6);
-}
-
-
-.active-tab {
-  background: var(--clr-accent) !important;
 }
