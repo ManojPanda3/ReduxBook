@@ -1,3 +1,13 @@
 .publish-book-section {
   width: 100vw;
 }
+
+.published-books>div>div.Book>p {
+  color: black !important;
+}
+
+.published-books {
+  display: grid;
+  grid-template-columns: repeat(3, fit-content);
+  grid-template-rows: repeat(3, fit-content);
+}

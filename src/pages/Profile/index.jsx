@@ -19,12 +19,11 @@ const Profile = () => {
     }).then(data => data.json())
       .then((res) => { setUserData(res.data); console.info(res); })
       .catch((err) => console.error(err));
-  }, []);
+  }, [UserName]);
   return <section className="profile">
     <NavBar />
     <section className="profile-section">
       <div className="user-details-profile" >
-
         <LazyLoad>
           <img src={UserData?.avatar || ""} alt="." height="100%" width="100%" />
         </LazyLoad>
@@ -34,7 +33,22 @@ const Profile = () => {
       </div>
     </section>
     <RecommendedBooks />
-    <PublishBooks />
+    <PublishBooks PublishedBooks={
+      [{
+        coverImages: [""],
+        title: "Hello world",
+        avgRating: 4.0,
+        price: 100
+      },
+      {
+        coverImages: [""],
+        title: "Hello world",
+        avgRating: 4.0,
+        price: 100
+      }
+      ]
+      // UserData?.publishedBooks
+    } />
   </section>
 }
 export default Profile;

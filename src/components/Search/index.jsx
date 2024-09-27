@@ -30,7 +30,6 @@ const ExpandSearch = ({ setSearchExtend }) => {
     </svg>
     <div>
       <input type="text" placeholder='search...' value={inputValue} onChange={handleInput} />
-
       <svg
         onClick={e => e.target.parentElement.parentElement.submit()}
         style={{ cursor: "pointer" }}

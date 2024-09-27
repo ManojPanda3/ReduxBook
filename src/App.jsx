@@ -8,6 +8,7 @@ const Profile = lazy(async () => await import('./pages/Profile'));
 const BookDetail = lazy(async () => await import('./pages/BookDetail'));
 import { UserContext } from './utils/GlobalVar.utils'
 import Loading from './components/Loading';
+import PublishBook from './pages/PublishBook';
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/singup" element={<Singup />}></Route>
             <Route path="/profile/:UserName" element={<Profile />}></Route >
-            <Route path="/book-detail/:BookId" element={<BookDetail />}></Route >
+            <Route path="/book-details/:BookId" element={<BookDetail />}></Route >
+            <Route path="/publishingBook" element={<PublishBook />}></Route >
           </Routes>
         </Suspense>
       </BrowserRouter>

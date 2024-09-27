@@ -1,0 +1,62 @@
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &>input:not(input[type="submit"]) {
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    background: #ede9e8;
+    box-shadow: 2px 2px 4px #dbd7d7, inset 2px 2px 4px #dbd7d7;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+  }
+
+  &>input[type="submit"] {
+    padding: 0.7rem 1.1rem;
+    margin: 2rem 0rem;
+    background-color: var(--clr-secoundary-2);
+    color: var(--clr-primary);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &>textarea {
+    resize: none;
+    padding: 0.8rem;
+    border: none;
+    box-shadow: 2px 2px 4px #dbd7d7, inset 2px 2px 4px #dbd7d7;
+    background: white;
+    border-radius: 0.3rem;
+  }
+
+  &>label {
+    padding-bottom: 0.2rem;
+    font-weight: 500;
+  }
+}
+
+.publishing-book {
+  text-align: center;
+  min-height: fit-content;
+  height: 100vh;
+  margin-bottom: 2rem;
+}
+
+.book-details {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .book-details {
+    flex-direction: column;
+    justify-content: space-evenly !important;
+  }
+}

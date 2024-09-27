@@ -35,3 +35,22 @@
 .file-add>path {
   stroke: #181818;
 }
+
+.coverimg {
+  border-radius: 0px;
+  aspect-ratio: 32/51;
+  background: var(--clr-light-black);
+  min-width: 12rem;
+  padding: 0px;
+  margin: 0px;
+
+  & img {
+    aspect-ratio: auto;
+    border-radius: 0;
+  }
+}
+
+.coverimg-uploader {
+  position: absolute;
+  transform: scale(0);
+}

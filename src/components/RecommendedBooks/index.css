@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  gap: 3px;
+  gap: 0.5rem;
   padding-bottom: 1rem;
   min-width: 365px;
 }
@@ -34,6 +34,8 @@
 
 .active-tab {
   background: var(--clr-accent) !important;
+  scale: 1.2;
+  transition: scale 50ms;
 }
 
 .books {
