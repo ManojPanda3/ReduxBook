@@ -30,28 +30,32 @@ const PublishBook = () => {
       setBookPdf(true);
     }
   };
-  const handleTags = async (e) => {
-    // e.preventDefault();
-
-    // console.log(e.target.value);
-    // console.log(e.key);
-    // try {
-    //   const data = await fetch('/api/v1/tag', {
-    //     method: "POST",
-    //     header: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: {
-    //       name: e.target.value,
-    //     }
-    //   });
-    // }catch(err){
-    //   console.error(err);
-    // }
+  const handleTagChange = async (e) => {
+    e.preventDefault();
+    if(e.target.value.includes(" ")){
+      let datas = e.target.value;
+      setTags(data=>[...data,datas]);
+      console.info(tags);
+      e.target.value="";
+      return;
+    }
+    if(e.target.value.trim()=="") return;
+    console.info(e.target.value);
+    try {
+      const data = await fetch('/api/v1/tag/tagSuggest', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: e.target.value.toLowerCase().trim(),
+        })
+      });
+    }catch(err){
+      console.error("Error while Tag Suggetion: ",err);
+    }
   }
-  const handleTagChange = async () => {
 
-  }
   return (
     <section className="publishing-book">
       <h1 style={{ padding: "1rem 0px", margin: "0px" }}>Publishing Book</h1>
@@ -74,7 +78,7 @@ const PublishBook = () => {
           <label htmlFor="title">Title</label>
           <input type="text" name="title" />
           <label htmlFor="tags">Tags</label>
-          <input onChange={handleTagChange} onKeyDown={handleTags} type="text" name="tags" />
+          <input onChange={handleTagChange}  type="text" name="tags" />
           <label htmlFor="price">Price</label>
           <input type="text" name="price" />
           <label htmlFor="decription">Description</label>
@@ -85,6 +89,5 @@ const PublishBook = () => {
     </section>
   );
 }
-
 
 export default PublishBook;
